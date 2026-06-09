@@ -38,6 +38,7 @@
     "dev": "vite build --watch"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "catalog:",
     "@vingy/shared": "workspace:^",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/language-core": "catalog:",
