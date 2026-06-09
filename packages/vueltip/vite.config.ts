@@ -13,6 +13,9 @@ export default defineConfig({
       entryRoot: 'src',
       include: ['src'],
       exclude: ['src/**/*.test.ts'],
+      bundleTypes: {
+        bundledPackages: ['@vingy/shared'],
+      },
     }),
   ],
   build: {

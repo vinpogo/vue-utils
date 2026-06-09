@@ -12,6 +12,12 @@ catalogs:
     '@changesets/cli':
       specifier: ^2.31.0
       version: 2.31.0
+    '@floating-ui/vue':
+      specifier: ^1.1.10
+      version: 1.1.10
+    '@microsoft/api-extractor':
+      specifier: ^7.58.1
+      version: 7.58.1
     '@tsconfig/node24':
       specifier: ^24.0.4
       version: 24.0.4
@@ -189,11 +195,14 @@ importers:
     dependencies:
       '@floating-ui/vue':
         specifier: 'catalog:'
-        version: 1.1.10(vue@3.5.34(typescript@5.9.3))
+        version: 1.1.10(vue@3.5.34(typescript@6.0.3))
       vue:
         specifier: 'catalog:'
         version: 3.5.34(typescript@6.0.3)
     devDependencies:
+      '@microsoft/api-extractor':
+        specifier: 'catalog:'
+        version: 7.58.1(@types/node@25.2.3)
       '@vingy/shared':
         specifier: workspace:^
         version: link:../shared
@@ -3057,11 +3066,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@floating-ui/vue@1.1.10(vue@3.5.34(typescript@5.9.3))':
+  '@floating-ui/vue@1.1.10(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@floating-ui/dom': 1.7.5
       '@floating-ui/utils': 0.2.10
-      vue-demi: 0.14.10(vue@3.5.34(typescript@5.9.3))
+      vue-demi: 0.14.10(vue@3.5.34(typescript@6.0.3))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -3124,7 +3133,6 @@ snapshots:
       '@rushstack/node-core-library': 5.21.0(@types/node@25.2.3)
     transitivePeerDependencies:
       - '@types/node'
-    optional: true
 
   '@microsoft/api-extractor@7.58.1(@types/node@24.11.0)':
     dependencies:
@@ -3164,7 +3172,6 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@types/node'
-    optional: true
 
   '@microsoft/tsdoc-config@0.18.1':
     dependencies:
@@ -3172,10 +3179,8 @@ snapshots:
       ajv: 8.18.0
       jju: 1.4.0
       resolve: 1.22.12
-    optional: true
 
-  '@microsoft/tsdoc@0.16.0':
-    optional: true
+  '@microsoft/tsdoc@0.16.0': {}
 
   '@napi-rs/wasm-runtime@1.1.4(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -3476,7 +3481,6 @@ snapshots:
       semver: 7.5.4
     optionalDependencies:
       '@types/node': 25.2.3
-    optional: true
 
   '@rushstack/problem-matcher@0.2.1(@types/node@24.11.0)':
     optionalDependencies:
@@ -3486,13 +3490,11 @@ snapshots:
   '@rushstack/problem-matcher@0.2.1(@types/node@25.2.3)':
     optionalDependencies:
       '@types/node': 25.2.3
-    optional: true
 
   '@rushstack/rig-package@0.7.2':
     dependencies:
       resolve: 1.22.12
       strip-json-comments: 3.1.1
-    optional: true
 
   '@rushstack/terminal@0.22.4(@types/node@24.11.0)':
     dependencies:
@@ -3510,7 +3512,6 @@ snapshots:
       supports-color: 8.1.1
     optionalDependencies:
       '@types/node': 25.2.3
-    optional: true
 
   '@rushstack/ts-command-line@5.3.4(@types/node@24.11.0)':
     dependencies:
@@ -3530,7 +3531,6 @@ snapshots:
       string-argv: 0.3.2
     transitivePeerDependencies:
       - '@types/node'
-    optional: true
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -3609,8 +3609,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@types/argparse@1.0.38':
-    optional: true
+  '@types/argparse@1.0.38': {}
 
   '@types/chai@5.2.3':
     dependencies:
@@ -3883,12 +3882,6 @@ snapshots:
       '@vue/shared': 3.5.34
       csstype: 3.2.3
 
-  '@vue/server-renderer@3.5.34(vue@3.5.34(typescript@5.9.3))':
-    dependencies:
-      '@vue/compiler-ssr': 3.5.34
-      '@vue/shared': 3.5.34
-      vue: 3.5.34(typescript@5.9.3)
-
   '@vue/server-renderer@3.5.34(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@vue/compiler-ssr': 3.5.34
@@ -3909,12 +3902,10 @@ snapshots:
   ajv-draft-04@1.0.0(ajv@8.18.0):
     optionalDependencies:
       ajv: 8.18.0
-    optional: true
 
   ajv-formats@3.0.1(ajv@8.18.0):
     optionalDependencies:
       ajv: 8.18.0
-    optional: true
 
   ajv@8.18.0:
     dependencies:
@@ -3922,7 +3913,6 @@ snapshots:
       fast-uri: 3.1.2
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
-    optional: true
 
   alien-signals@3.1.2: {}
 
@@ -3942,8 +3932,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  balanced-match@4.0.4:
-    optional: true
+  balanced-match@4.0.4: {}
 
   baseline-browser-mapping@2.10.29: {}
 
@@ -3956,7 +3945,6 @@ snapshots:
   brace-expansion@5.0.6:
     dependencies:
       balanced-match: 4.0.4
-    optional: true
 
   braces@3.0.3:
     dependencies:
@@ -4019,8 +4007,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  diff@8.0.4:
-    optional: true
+  diff@8.0.4: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -4044,8 +4031,7 @@ snapshots:
 
   error-stack-parser-es@1.0.5: {}
 
-  es-errors@1.3.0:
-    optional: true
+  es-errors@1.3.0: {}
 
   es-module-lexer@2.1.0: {}
 
@@ -4095,8 +4081,7 @@ snapshots:
 
   extendable-error@0.1.7: {}
 
-  fast-deep-equal@3.1.3:
-    optional: true
+  fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.3:
     dependencies:
@@ -4106,8 +4091,7 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.8
 
-  fast-uri@3.1.2:
-    optional: true
+  fast-uri@3.1.2: {}
 
   fastq@1.20.1:
     dependencies:
@@ -4131,7 +4115,6 @@ snapshots:
       graceful-fs: 4.2.11
       jsonfile: 6.2.1
       universalify: 2.0.1
-    optional: true
 
   fs-extra@7.0.1:
     dependencies:
@@ -4151,8 +4134,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  function-bind@1.1.2:
-    optional: true
+  function-bind@1.1.2: {}
 
   gensync@1.0.0-beta.2: {}
 
@@ -4171,13 +4153,11 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  has-flag@4.0.0:
-    optional: true
+  has-flag@4.0.0: {}
 
   hasown@2.0.3:
     dependencies:
       function-bind: 1.1.2
-    optional: true
 
   hookable@5.5.3: {}
 
@@ -4189,13 +4169,11 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  import-lazy@4.0.0:
-    optional: true
+  import-lazy@4.0.0: {}
 
   is-core-module@2.16.2:
     dependencies:
       hasown: 2.0.3
-    optional: true
 
   is-docker@3.0.0: {}
 
@@ -4227,8 +4205,7 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jju@1.4.0:
-    optional: true
+  jju@1.4.0: {}
 
   js-tokens@4.0.0: {}
 
@@ -4243,8 +4220,7 @@ snapshots:
 
   jsesc@3.1.0: {}
 
-  json-schema-traverse@1.0.0:
-    optional: true
+  json-schema-traverse@1.0.0: {}
 
   json5@2.2.3: {}
 
@@ -4257,7 +4233,6 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
-    optional: true
 
   kolorist@1.8.0: {}
 
@@ -4322,8 +4297,7 @@ snapshots:
 
   lodash.startcase@4.4.0: {}
 
-  lodash@4.18.1:
-    optional: true
+  lodash@4.18.1: {}
 
   lru-cache@5.1.1:
     dependencies:
@@ -4332,7 +4306,6 @@ snapshots:
   lru-cache@6.0.0:
     dependencies:
       yallist: 4.0.0
-    optional: true
 
   magic-string@0.30.21:
     dependencies:
@@ -4348,7 +4321,6 @@ snapshots:
   minimatch@10.2.3:
     dependencies:
       brace-expansion: 5.0.6
-    optional: true
 
   mitt@3.0.1: {}
 
@@ -4460,8 +4432,7 @@ snapshots:
 
   path-key@3.1.1: {}
 
-  path-parse@1.0.7:
-    optional: true
+  path-parse@1.0.7: {}
 
   path-type@4.0.0: {}
 
@@ -4527,8 +4498,7 @@ snapshots:
       pify: 4.0.1
       strip-bom: 3.0.0
 
-  require-from-string@2.0.2:
-    optional: true
+  require-from-string@2.0.2: {}
 
   resolve-from@5.0.0: {}
 
@@ -4538,7 +4508,6 @@ snapshots:
       is-core-module: 2.16.2
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
-    optional: true
 
   reusify@1.1.0: {}
 
@@ -4610,7 +4579,6 @@ snapshots:
   semver@7.5.4:
     dependencies:
       lru-cache: 6.0.0
-    optional: true
 
   semver@7.8.0: {}
 
@@ -4634,8 +4602,7 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  source-map@0.6.1:
-    optional: true
+  source-map@0.6.1: {}
 
   spawndamnit@3.0.1:
     dependencies:
@@ -4650,8 +4617,7 @@ snapshots:
 
   std-env@4.1.0: {}
 
-  string-argv@0.3.2:
-    optional: true
+  string-argv@0.3.2: {}
 
   strip-ansi@6.0.1:
     dependencies:
@@ -4659,8 +4625,7 @@ snapshots:
 
   strip-bom@3.0.0: {}
 
-  strip-json-comments@3.1.1:
-    optional: true
+  strip-json-comments@3.1.1: {}
 
   superjson@2.2.6:
     dependencies:
@@ -4669,10 +4634,8 @@ snapshots:
   supports-color@8.1.1:
     dependencies:
       has-flag: 4.0.0
-    optional: true
 
-  supports-preserve-symlinks-flag@1.0.0:
-    optional: true
+  supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwindcss@4.3.0: {}
 
@@ -4704,8 +4667,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  typescript@5.9.3:
-    optional: true
+  typescript@5.9.3: {}
 
   typescript@6.0.3: {}
 
@@ -4715,8 +4677,7 @@ snapshots:
 
   universalify@0.1.2: {}
 
-  universalify@2.0.1:
-    optional: true
+  universalify@2.0.1: {}
 
   unplugin-dts@1.0.0(@microsoft/api-extractor@7.58.1(@types/node@24.11.0))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.0)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)):
     dependencies:
@@ -4888,25 +4849,15 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-demi@0.14.10(vue@3.5.34(typescript@5.9.3)):
+  vue-demi@0.14.10(vue@3.5.34(typescript@6.0.3)):
     dependencies:
-      vue: 3.5.34(typescript@5.9.3)
+      vue: 3.5.34(typescript@6.0.3)
 
   vue-tsc@3.2.8(typescript@6.0.3):
     dependencies:
       '@volar/typescript': 2.4.28
       '@vue/language-core': 3.2.8
       typescript: 6.0.3
-
-  vue@3.5.34(typescript@5.9.3):
-    dependencies:
-      '@vue/compiler-dom': 3.5.34
-      '@vue/compiler-sfc': 3.5.34
-      '@vue/runtime-dom': 3.5.34
-      '@vue/server-renderer': 3.5.34(vue@3.5.34(typescript@5.9.3))
-      '@vue/shared': 3.5.34
-    optionalDependencies:
-      typescript: 5.9.3
 
   vue@3.5.34(typescript@6.0.3):
     dependencies:
@@ -4944,5 +4895,4 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yallist@4.0.0:
-    optional: true
+  yallist@4.0.0: {}
