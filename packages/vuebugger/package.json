@@ -1,6 +1,6 @@
 {
   "name": "@vingy/vuebugger",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Vue devtools plugin to debug anything.",
   "keywords": [
     "composable",

@@ -1,5 +1,15 @@
 # @vingy/vueltip
 
+## 2.2.1
+
+### Patch Changes
+
+- [#57](https://github.com/vinpogo/vue-utils/pull/57) [`aabb85e`](https://github.com/vinpogo/vue-utils/commit/aabb85eab0f9a95cd01a3d72a6e859cacdee5e7f) Thanks [@vinpogo](https://github.com/vinpogo)! - fix: inline `@vingy/shared` types in published `.d.ts`
+
+- [#58](https://github.com/vinpogo/vue-utils/pull/58) [`9a596e9`](https://github.com/vinpogo/vue-utils/commit/9a596e9fcc8778b47d018ba544739768563ca6e4) Thanks [@vinpogo](https://github.com/vinpogo)! - deps: update dependencies
+
+- [#55](https://github.com/vinpogo/vue-utils/pull/55) [`f5c6838`](https://github.com/vinpogo/vue-utils/commit/f5c68383369c5f0e0edd9ed2391e46617514db32) Thanks [@vinpogo](https://github.com/vinpogo)! - deps: update dependencies
+
 ## 2.2.0
 
 ### Minor Changes
