@@ -26,7 +26,7 @@ catalogs:
       version: 24.11.0
     '@vitejs/plugin-vue':
       specifier: ^6.0.7
-      version: 6.0.6
+      version: 6.0.7
     '@vitest/browser-playwright':
       specifier: 4.1.8
       version: 4.1.8
@@ -55,11 +55,11 @@ catalogs:
       specifier: ^6.0.3
       version: 6.0.3
     unplugin-dts:
-      specifier: ^1.0.2
-      version: 1.0.0
+      specifier: ^1.0.3
+      version: 1.0.3
     vite:
       specifier: ^8.0.16
-      version: 8.0.12
+      version: 8.0.16
     vite-plugin-vue-devtools:
       specifier: ^8.1.2
       version: 8.1.2
@@ -109,7 +109,7 @@ importers:
         version: 6.0.3
       unplugin-dts:
         specifier: 'catalog:'
-        version: 1.0.2(@microsoft/api-extractor@7.58.1(@types/node@24.11.0))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))
+        version: 1.0.3(@microsoft/api-extractor@7.58.1(@types/node@24.11.0))(@vue/language-core@3.2.8)(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))
       vite:
         specifier: 'catalog:'
         version: 8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)
@@ -140,7 +140,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.6(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.8(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/tsconfig':
         specifier: 'catalog:'
         version: 0.9.1(typescript@6.0.3)(vue@3.5.34(typescript@6.0.3))
@@ -158,13 +158,13 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.6(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.8(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/language-core':
         specifier: 'catalog:'
         version: 3.1.8(typescript@6.0.3)
       unplugin-dts:
         specifier: 'catalog:'
-        version: 1.0.0(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
+        version: 1.0.3(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
       vite:
         specifier: 'catalog:'
         version: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
@@ -177,7 +177,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.6(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.8(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/devtools-api':
         specifier: 'catalog:'
         version: 8.1.2
@@ -186,7 +186,7 @@ importers:
         version: 3.1.8(typescript@6.0.3)
       unplugin-dts:
         specifier: 'catalog:'
-        version: 1.0.0(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
+        version: 1.0.3(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
       vite:
         specifier: 'catalog:'
         version: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
@@ -208,13 +208,13 @@ importers:
         version: link:../shared
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.6(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.8(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/language-core':
         specifier: 'catalog:'
         version: 3.1.8(typescript@6.0.3)
       unplugin-dts:
         specifier: 'catalog:'
-        version: 1.0.0(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
+        version: 1.0.3(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))
       vite:
         specifier: 'catalog:'
         version: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
@@ -1119,20 +1119,8 @@ packages:
   '@rolldown/pluginutils@1.0.0':
     resolution: {integrity: sha512-aKs/3GSWyV0mrhNmt/96/Z3yczC3yvrzYATCiCXQebBsGyYzjNdUphRVLeJQ67ySKVXRfMxt2lm12pmXvbPFQQ==}
 
-  '@rolldown/pluginutils@1.0.0-rc.13':
-    resolution: {integrity: sha512-3ngTAv6F/Py35BsYbeeLeecvhMKdsKm4AoOETVhAA+Qc8nrA2I0kF7oa93mE9qnIurngOSpMnQ0x2nQY2FPviA==}
-
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
-
-  '@rollup/pluginutils@5.3.0':
-    resolution: {integrity: sha512-5EdhGZtnu3V88ces7s53hhfK5KSASnJZv8Lulpc04cWO3REESroJXg73DFsOmgbU2BhwV0E20bu2IDZb3VKW4Q==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
 
   '@rollup/pluginutils@5.4.0':
     resolution: {integrity: sha512-MfPp06CjRLfXQ3wY0R8vJDYBy/MvVcc9OulEfR0B8Iv9ko+GCNaRZ+EpJYFl27LhKsZK0o420sYCRHCjfCgeUg==}
@@ -1438,15 +1426,15 @@ packages:
   '@types/node@25.2.3':
     resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
 
-  '@vitejs/plugin-vue@6.0.6':
-    resolution: {integrity: sha512-u9HHgfrq3AjXlysn0eINFnWQOJQLO9WN6VprZ8FXl7A2bYisv3Hui9Ij+7QZ41F/WYWarHjwBbXtD7dKg3uxbg==}
+  '@vitejs/plugin-vue@6.0.7':
+    resolution: {integrity: sha512-km+p+XdSz9Sxm5rqUbqcSfZYaAniKxWBj1KURl+Jr7UaPvvX7BmaWMdP69I5rrFDeQGyxAG7NXdc57vz+snhWg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.2.25
 
-  '@vitejs/plugin-vue@6.0.7':
-    resolution: {integrity: sha512-km+p+XdSz9Sxm5rqUbqcSfZYaAniKxWBj1KURl+Jr7UaPvvX7BmaWMdP69I5rrFDeQGyxAG7NXdc57vz+snhWg==}
+  '@vitejs/plugin-vue@6.0.8':
+    resolution: {integrity: sha512-0ZjgOg7oO6farnNGup7yvoM/YXZV84OZxHAwtflItNa/6zzQyVb5LNxyea3FEKEX2XlagIKzrlH7wwxkKgtiew==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2080,10 +2068,6 @@ packages:
     resolution: {integrity: sha512-NXYBzinNrblfraPGyrbPoD19C1h9lfI/1mzgWYvXUTe414Gz/X1FD2XBZSZM7rRTrMA8JL3OtAaGifrIKhQ5yQ==}
     engines: {node: '>= 12.0.0'}
 
-  local-pkg@1.1.2:
-    resolution: {integrity: sha512-arhlxbFRmoQHl33a0Zkle/YWlmNwoyt6QNZEIJcqNbdrsix5Lvc4HyyI3EnwxTYlZYc32EbYrQ8SzEZ7dqgg9A==}
-    engines: {node: '>=14'}
-
   local-pkg@1.2.1:
     resolution: {integrity: sha512-++gUqRDEvcnN6Zhqrr+y/CkVEHhlrR96vZn3nZZPYzMcBUyBtTKzB9NadClFIsIVSsu+3i9tfk/erqy9kAmt7Q==}
     engines: {node: '>=14'}
@@ -2273,9 +2257,6 @@ packages:
 
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
-
-  pkg-types@2.3.0:
-    resolution: {integrity: sha512-SIqCzDRg0s9npO5XQ3tNZioRY1uK06lA41ynBC1YmFTmnY6FjUjVt6s4LoADmwoig1qqD0oK8h1p/8mlMx8Oig==}
 
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
@@ -2523,42 +2504,12 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-dts@1.0.0:
-    resolution: {integrity: sha512-qz+U1lCscwq+t8Mkaxy5Esa7IQ5wWV18b4mnioOXSdnPaNiJ0+qgE3I+KL6UkXYZWxxGo2qdGone8LEQ52Sfkw==}
+  unplugin-dts@1.0.3:
+    resolution: {integrity: sha512-/GR887wfG4r1cWyt1UZsLRuMIjsmEbGkS9yJrz+0dsToHAYUD5CTyP3JMGVLv25j9K0mJcwAVvZno/aTuSUvNg==}
     peerDependencies:
       '@microsoft/api-extractor': '>=7'
       '@rspack/core': ^1
-      '@vue/language-core': ~3.1.5
-      esbuild: '*'
-      rolldown: '*'
-      rollup: '>=3'
-      typescript: '>=4'
-      vite: '>=3'
-      webpack: ^4 || ^5
-    peerDependenciesMeta:
-      '@microsoft/api-extractor':
-        optional: true
-      '@rspack/core':
-        optional: true
-      '@vue/language-core':
-        optional: true
-      esbuild:
-        optional: true
-      rolldown:
-        optional: true
-      rollup:
-        optional: true
-      vite:
-        optional: true
-      webpack:
-        optional: true
-
-  unplugin-dts@1.0.2:
-    resolution: {integrity: sha512-VbNiMD0LMl/t6nJueGtrCp79N7ZO1nquxj/FUybJDnKwZGsnW2wjdwBSzA3QEHujoxmxZIptsG43hL7LzXE96w==}
-    peerDependencies:
-      '@microsoft/api-extractor': '>=7'
-      '@rspack/core': ^1
-      '@vue/language-core': ~3.1.5
+      '@vue/language-core': ^3.1.5
       esbuild: '*'
       rolldown: '*'
       rollup: '>=3'
@@ -3643,17 +3594,7 @@ snapshots:
 
   '@rolldown/pluginutils@1.0.0': {}
 
-  '@rolldown/pluginutils@1.0.0-rc.13': {}
-
   '@rolldown/pluginutils@1.0.1': {}
-
-  '@rollup/pluginutils@5.3.0(rollup@4.59.0)':
-    dependencies:
-      '@types/estree': 1.0.9
-      estree-walker: 2.0.2
-      picomatch: 4.0.4
-    optionalDependencies:
-      rollup: 4.59.0
 
   '@rollup/pluginutils@5.4.0(rollup@4.59.0)':
     dependencies:
@@ -3917,16 +3858,16 @@ snapshots:
       undici-types: 7.16.0
     optional: true
 
-  '@vitejs/plugin-vue@6.0.6(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
-    dependencies:
-      '@rolldown/pluginutils': 1.0.0-rc.13
-      vite: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
-      vue: 3.5.34(typescript@6.0.3)
-
   '@vitejs/plugin-vue@6.0.7(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)
+      vue: 3.5.34(typescript@6.0.3)
+
+  '@vitejs/plugin-vue@6.0.8(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.1
+      vite: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
       vue: 3.5.34(typescript@6.0.3)
 
   '@vitest/browser-playwright@4.1.8(playwright@1.60.0)(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vitest@4.1.8)':
@@ -4568,12 +4509,6 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.32.0
       lightningcss-win32-x64-msvc: 1.32.0
 
-  local-pkg@1.1.2:
-    dependencies:
-      mlly: 1.8.2
-      pkg-types: 2.3.0
-      quansync: 0.2.11
-
   local-pkg@1.2.1:
     dependencies:
       mlly: 1.8.2
@@ -4750,12 +4685,6 @@ snapshots:
     dependencies:
       confbox: 0.1.8
       mlly: 1.8.2
-      pathe: 2.0.3
-
-  pkg-types@2.3.0:
-    dependencies:
-      confbox: 0.2.4
-      exsolve: 1.0.8
       pathe: 2.0.3
 
   pkg-types@2.3.1:
@@ -5006,28 +4935,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-dts@1.0.0(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)):
-    dependencies:
-      '@rollup/pluginutils': 5.3.0(rollup@4.59.0)
-      '@volar/typescript': 2.4.28
-      compare-versions: 6.1.1
-      debug: 4.4.3
-      kolorist: 1.8.0
-      local-pkg: 1.1.2
-      magic-string: 0.30.21
-      typescript: 6.0.3
-      unplugin: 2.3.11
-    optionalDependencies:
-      '@microsoft/api-extractor': 7.58.1(@types/node@25.2.3)
-      '@vue/language-core': 3.1.8(typescript@6.0.3)
-      esbuild: 0.27.3
-      rolldown: 1.0.3
-      rollup: 4.59.0
-      vite: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
-    transitivePeerDependencies:
-      - supports-color
-
-  unplugin-dts@1.0.2(@microsoft/api-extractor@7.58.1(@types/node@24.11.0))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)):
+  unplugin-dts@1.0.3(@microsoft/api-extractor@7.58.1(@types/node@24.11.0))(@vue/language-core@3.2.8)(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.59.0)
       '@volar/typescript': 2.4.28
@@ -5040,11 +4948,32 @@ snapshots:
       unplugin: 2.3.11
     optionalDependencies:
       '@microsoft/api-extractor': 7.58.1(@types/node@24.11.0)
-      '@vue/language-core': 3.1.8(typescript@6.0.3)
+      '@vue/language-core': 3.2.8
       esbuild: 0.27.3
       rolldown: 1.0.3
       rollup: 4.59.0
       vite: 8.0.16(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  unplugin-dts@1.0.3(@microsoft/api-extractor@7.58.1(@types/node@25.2.3))(@vue/language-core@3.1.8(typescript@6.0.3))(esbuild@0.27.3)(rolldown@1.0.3)(rollup@4.59.0)(typescript@6.0.3)(vite@8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)):
+    dependencies:
+      '@rollup/pluginutils': 5.4.0(rollup@4.59.0)
+      '@volar/typescript': 2.4.28
+      compare-versions: 6.1.1
+      debug: 4.4.3
+      kolorist: 1.8.0
+      local-pkg: 1.2.1
+      magic-string: 0.30.21
+      typescript: 6.0.3
+      unplugin: 2.3.11
+    optionalDependencies:
+      '@microsoft/api-extractor': 7.58.1(@types/node@25.2.3)
+      '@vue/language-core': 3.1.8(typescript@6.0.3)
+      esbuild: 0.27.3
+      rolldown: 1.0.3
+      rollup: 4.59.0
+      vite: 8.0.12(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
     transitivePeerDependencies:
       - supports-color
 
