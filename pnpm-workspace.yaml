@@ -17,7 +17,7 @@ catalogs:
     '@vue/tsconfig': ^0.9.1
     oxfmt: ^0.54.0
     oxlint: ^1.69.0
-    pinia: ^3.0.4
+    pinia: ^4.0.2
     playwright: ^1.60.0
     typescript: ^6.0.3
     unplugin-dts: ^1.0.3
