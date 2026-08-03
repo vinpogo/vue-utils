@@ -11,7 +11,7 @@
     "@vingy/vuebugger": "workspace:^",
     "@vingy/vueltip": "workspace:^",
     "pinia": "catalog:",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "^4.3.3",
     "vue": "catalog:"
   },
   "devDependencies": {
