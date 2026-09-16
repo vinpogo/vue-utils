@@ -1,5 +1,18 @@
 # @vingy/vueltip
 
+## 2.2.2
+
+### Patch Changes
+
+- [#61](https://github.com/vinpogo/vue-utils/pull/61) [`9e6f681`](https://github.com/vinpogo/vue-utils/commit/9e6f6817a461030cc87e6b52ef1a1c08455d1725) Thanks [@dependabot](https://github.com/apps/dependabot)! - Support `@floating-ui/vue` v2 alongside v1.
+
+  The peer range widens from `^1.1.10` to `^1.1.10 || ^2.0.1`. `@floating-ui/vue` v2.0.0's only
+  breaking change was dropping `vue-demi` (ending Vue 2 / Vue <3.3.0 support); the public API
+  vueltip uses is unchanged, and vueltip is Vue 3-only regardless, so no consumer migration is
+  required.
+
+- [#61](https://github.com/vinpogo/vue-utils/pull/61) [`9e6f681`](https://github.com/vinpogo/vue-utils/commit/9e6f6817a461030cc87e6b52ef1a1c08455d1725) Thanks [@dependabot](https://github.com/apps/dependabot)! - deps: update dependencies
+
 ## 2.2.1
 
 ### Patch Changes

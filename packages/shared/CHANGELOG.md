@@ -1,5 +1,11 @@
 # @vingy/shared
 
+## 0.1.2
+
+### Patch Changes
+
+- [#61](https://github.com/vinpogo/vue-utils/pull/61) [`9e6f681`](https://github.com/vinpogo/vue-utils/commit/9e6f6817a461030cc87e6b52ef1a1c08455d1725) Thanks [@dependabot](https://github.com/apps/dependabot)! - deps: update dependencies
+
 ## 0.1.1
 
 ### Patch Changes
