@@ -1,5 +1,21 @@
 # @vingy/vueltip
 
+## 2.3.0
+
+### Minor Changes
+
+- [#71](https://github.com/vinpogo/vue-utils/pull/71) [`1eede22`](https://github.com/vinpogo/vue-utils/commit/1eede224ceaca9e3ab71ebb467a6c0188e5dc5d4) Thanks [@vinpogo](https://github.com/vinpogo)! - Export the `TooltipDirective`, `Value` and `Modifier` types. `TooltipDirective`
+  in particular has to be exported for the `GlobalDirectives` augmentation to
+  survive the `.d.ts` rollup — without it, `vue-tsc` resolved `v-tooltip`'s value
+  to `any` and silently accepted malformed bindings.
+
+### Patch Changes
+
+- [#71](https://github.com/vinpogo/vue-utils/pull/71) [`cead3b8`](https://github.com/vinpogo/vue-utils/commit/cead3b8a33f69317a7c01c822b2ce8ac726d1bf6) Thanks [@vinpogo](https://github.com/vinpogo)! - Fix modal dialog reparenting: the tooltip is now restored to its original parent
+  after leaving a `<dialog>`, works when the reference changes without the tooltip
+  hiding in between, and reparents correctly when the tooltip is rendered with
+  `v-if`.
+
 ## 2.2.2
 
 ### Patch Changes
