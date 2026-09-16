@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "typecheck": "vue-tsc --build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
