@@ -33,8 +33,6 @@ export const useVueltip = ({
   arrowSize,
   floatingOptions,
 }: UseTooltipOptions) => {
-  let initialParent: Maybe<HTMLElement>
-
   const show = computed(
     () => !!debouncedHoveredElement.value,
   )
@@ -45,7 +43,6 @@ export const useVueltip = ({
       if (!value) return
       const el = tooltipElement.value
       if (!el) return
-      initialParent = el.parentElement
 
       const onEnter = () =>
         (hoveredElement.value =
@@ -104,32 +101,35 @@ export const useVueltip = ({
   })
 
   if (getOption('handleDialogModals')) {
-    watch(show, (value) => {
-      if (
-        !value ||
-        !tooltipElement.value ||
-        !debouncedHoveredElement.value ||
-        !initialParent
-      )
-        return
-      const dialogEl =
-        debouncedHoveredElement.value.closest('dialog')
-      if (!dialogEl) {
-        if (
-          tooltipElement.value.parentElement !==
-          initialParent
-        ) {
-          initialParent.appendChild(tooltipElement.value)
+    // Captured once: every later show must be able to compare against the
+    // parent the tooltip was rendered into, not the dialog we moved it to.
+    let initialParent: Maybe<HTMLElement>
+
+    watch(
+      debouncedHoveredElement,
+      (reference) => {
+        const el = tooltipElement.value
+        if (!reference || !el) return
+        initialParent ??= el.parentElement
+        if (!initialParent) return
+
+        const dialogEl = reference.closest('dialog')
+        const isModal =
+          !!dialogEl &&
+          globalThis.getComputedStyle(
+            dialogEl,
+            '::backdrop',
+          ).display !== 'none'
+
+        if (isModal) {
+          dialogEl.appendChild(el)
+        } else if (el.parentElement !== initialParent) {
+          initialParent.appendChild(el)
         }
-        return
-      }
-      const isModal =
-        globalThis.getComputedStyle(dialogEl, '::backdrop')
-          .display !== 'none'
-      if (isModal) {
-        dialogEl.appendChild(tooltipElement.value)
-      }
-    })
+      },
+      // post-flush so a v-if tooltip element already exists when we reparent.
+      { flush: 'post' },
+    )
   }
 
   return {
