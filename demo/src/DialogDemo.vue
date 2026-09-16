@@ -46,7 +46,7 @@ const closeDialog = () => {
           </button>
           <button
             v-tooltip="{
-              content: 'Undo the last action',
+              text: 'Undo the last action',
               placement: 'right',
             }"
             class="w-full rounded-lg bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-200 transition hover:bg-blue-500/30"
@@ -55,7 +55,7 @@ const closeDialog = () => {
           </button>
           <button
             v-tooltip="{
-              content: 'Discard changes and close',
+              text: 'Discard changes and close',
               placement: 'bottom',
             }"
             class="w-full rounded-lg bg-rose-500/20 px-4 py-2 text-sm font-medium text-rose-200 transition hover:bg-rose-500/30"
