@@ -38,12 +38,15 @@ type HarnessOptions = {
   offset?: number
   padding?: number
   withArrow?: boolean
+  /** Render the tooltip with `v-if` instead of the default `v-show`. */
+  vIf?: boolean
 }
 
 const mountHarness = ({
   offset,
   padding,
   withArrow,
+  vIf,
 }: HarnessOptions = {}) => {
   let api: ReturnType<typeof useVueltip> | undefined
 
@@ -64,26 +67,34 @@ const mountHarness = ({
       })
       const local = api
       return () =>
-        h(
-          'div',
-          {
-            ref: tooltipElement,
-            style: {
-              ...local.tooltipStyles.value,
-              width: `${TOOLTIP_WIDTH}px`,
-              height: `${TOOLTIP_HEIGHT}px`,
-              display: local.show.value ? '' : 'none',
-            },
-          },
-          withArrow
-            ? [
-                h('div', {
-                  ref: arrowElement,
-                  style: local.arrowStyles.value,
-                }),
-              ]
-            : [],
-        )
+        vIf && !local.show.value
+          ? null
+          : h(
+              'div',
+              {
+                ref: tooltipElement,
+                style: {
+                  ...local.tooltipStyles.value,
+                  width: `${TOOLTIP_WIDTH}px`,
+                  height: `${TOOLTIP_HEIGHT}px`,
+                  ...(vIf
+                    ? {}
+                    : {
+                        display: local.show.value
+                          ? ''
+                          : 'none',
+                      }),
+                },
+              },
+              withArrow
+                ? [
+                    h('div', {
+                      ref: arrowElement,
+                      style: local.arrowStyles.value,
+                    }),
+                  ]
+                : [],
+            )
     },
   })
 
@@ -375,15 +386,7 @@ describe('useVueltip dialog reparenting', () => {
     teardown(harness, outside)
   })
 
-  // KNOWN PRE-EXISTING BUG, unrelated to the @floating-ui/vue 2.x bump: this
-  // fails identically on 1.1.10 and 2.0.1. The listener watcher reassigns
-  // `initialParent = el.parentElement` on every show (composables.ts), and it
-  // uses flush: 'post' while the dialog watcher is pre-flush. So on the
-  // activation that moves the tooltip into the dialog, `initialParent` is
-  // afterwards overwritten *to the dialog* -- and the restore branch
-  // (`tooltipElement.parentElement !== initialParent`) can never fire again.
-  // Flip this to `it` once composables.ts only records `initialParent` once.
-  it.fails('restores the tooltip to its original parent when leaving the dialog', async () => {
+  it('restores the tooltip to its original parent when leaving the dialog', async () => {
     setOptions({ handleDialogModals: true })
     const harness = mountHarness({ offset: 8 })
     const { dialog, inDialog } = setupDialog()
@@ -407,13 +410,67 @@ describe('useVueltip dialog reparenting', () => {
     await nextTick()
     await show(outside, 'top')
     await nextTick()
+    expect(tip.parentElement).toBe(initialParent)
 
-    try {
-      expect(tip.parentElement).toBe(initialParent)
-    } finally {
-      teardownDialog(dialog)
-      teardown(harness, outside)
-    }
+    teardownDialog(dialog)
+    teardown(harness, outside)
+  })
+
+  // The reference can change without `show` ever going false, so reparenting
+  // has to react to the reference rather than to the visibility toggle.
+  it('restores the tooltip when moving straight from the dialog to an outside element', async () => {
+    setOptions({ handleDialogModals: true })
+    const harness = mountHarness({ offset: 8 })
+    const { dialog, inDialog } = setupDialog()
+    const outside = createReference({
+      top: '300px',
+      left: '200px',
+    })
+
+    // Grab the handle before the first show: reparenting moves the element
+    // out of the container, so container.firstElementChild stops resolving.
+    const tip = harness.tooltip()
+
+    await show(inDialog, 'top')
+    await nextTick()
+    expect(tip.parentElement).toBe(dialog)
+
+    // No hidden state in between: straight from the dialog to the outside.
+    await show(outside, 'top')
+    await nextTick()
+    expect(tip.parentElement).toBe(harness.container)
+
+    teardownDialog(dialog)
+    teardown(harness, outside)
+  })
+
+  // The demo renders the tooltip with `v-if`, so the element does not exist
+  // when the reference changes -- only after the render flush.
+  it('v-if: moves the tooltip into the dialog and restores it afterwards', async () => {
+    setOptions({ handleDialogModals: true })
+    const harness = mountHarness({ offset: 8, vIf: true })
+    const { dialog, inDialog } = setupDialog()
+    const outside = createReference({
+      top: '300px',
+      left: '200px',
+    })
+
+    expect(harness.container.firstElementChild).toBeNull()
+
+    await show(inDialog, 'top')
+    await nextTick()
+    // Reparenting already happened, so the element is no longer reachable
+    // through the container -- pick it up from the dialog instead.
+    const tip = dialog.lastElementChild as HTMLElement
+    expect(tip).not.toBe(inDialog)
+    expect(tip.parentElement).toBe(dialog)
+
+    await show(outside, 'top')
+    await nextTick()
+    expect(tip.parentElement).toBe(harness.container)
+
+    teardownDialog(dialog)
+    teardown(harness, outside)
   })
 
   it('leaves the tooltip in place when handleDialogModals is disabled', async () => {
