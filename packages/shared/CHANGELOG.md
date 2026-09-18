@@ -1,4 +1,4 @@
-# @vingy/shared
+# Changelog
 
 ## 0.1.2
 

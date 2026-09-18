@@ -11,6 +11,7 @@ experimental = true
 install = "pnpm install"
 build = "pnpm build && pnpm typecheck"
 dev = "pnpm dev"
+bump = "pnpm bump"
 test = "pnpm test"
 oxlint = "pnpm oxlint"
 oxfmt = "pnpm oxfmt --check"

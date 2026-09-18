@@ -12,20 +12,19 @@
   ],
   "type": "module",
   "scripts": {
+    "postinstall": "nimver install-hooks --force || exit 0",
     "test": "pnpm vitest",
     "build": "pnpm -r --sort build",
     "dev": "pnpm -r --parallel --stream dev",
     "demo": "pnpm --filter demo run dev",
     "typecheck": "tsc --noEmit && pnpm --filter demo run typecheck",
-    "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:publish": "pnpm build && changeset publish"
+    "bump": "nimver bump",
+    "publish": "pnpm build && pnpm -r publish --no-git-checks"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "catalog:",
-    "@changesets/cli": "catalog:",
     "@tsconfig/node24": "catalog:",
     "@types/node": "catalog:",
+    "@vingy/nimver": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitest/browser-playwright": "catalog:",
     "oxfmt": "catalog:",

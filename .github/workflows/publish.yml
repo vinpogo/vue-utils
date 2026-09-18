@@ -1,11 +1,12 @@
 on:
   push:
-    branches:
-      - main
+    tags:
+      # nimver writes `@vingy/<package>-v<version>`. A bare `*` would not match:
+      # GitHub Actions patterns treat it as "any character except `/`".
+      - '@vingy/*'
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
   id-token: write
 
 jobs:
@@ -14,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - uses: jdx/mise-action@v2
 
@@ -30,10 +29,9 @@ jobs:
 
       - run: mise run install --frozen-lockfile
 
-      - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@v1
-        with:
-          publish: pnpm changeset:publish
-          version: pnpm changeset:version
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      # Publishes every workspace package whose version is not on the registry
+      # yet, so a tag for one package is a no-op for the other.
+      - name: Publish to npm
+        # `pnpm run`, not `pnpm publish`: the latter resolves to pnpm's built-in
+        # publish command and would try to publish the workspace root.
+        run: pnpm run publish

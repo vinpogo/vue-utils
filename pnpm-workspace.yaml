@@ -4,12 +4,11 @@ packages:
 
 catalogs:
   default:
-    '@changesets/changelog-github': ^0.7.0
-    '@changesets/cli': ^2.31.0
     '@floating-ui/vue': ^2.0.1
     '@microsoft/api-extractor': ^7.58.12
     '@tsconfig/node24': ^24.0.4
     '@types/node': ^24.11.0
+    '@vingy/nimver': ^5.0.0
     '@vitejs/plugin-vue': ^6.0.8
     '@vitest/browser-playwright': 4.1.8
     '@vue/devtools-api': ^8.1.2

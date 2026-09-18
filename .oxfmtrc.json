@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "ignorePatterns": [
-    ".changeset/**",
     ".github/skills/**",
     ".github/copilot-instructions.md"
   ],

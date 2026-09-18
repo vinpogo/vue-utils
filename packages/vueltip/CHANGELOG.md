@@ -1,4 +1,4 @@
-# @vingy/vueltip
+# Changelog
 
 ## 2.3.0
 
