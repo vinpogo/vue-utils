@@ -1,4 +1,4 @@
-# @vingy/vuebugger
+# Changelog
 
 ## 0.4.2
 

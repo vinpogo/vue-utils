@@ -7,24 +7,14 @@ jobs:
     strategy:
       matrix:
         task: [oxlint, oxfmt, build, test]
-    env:
-      SKIP_CI: ${{ startsWith(github.head_ref, 'changeset-release/') }}
     steps:
-      - name: Skip redundant CI on release PRs
-        if: ${{ env.SKIP_CI == 'true' }}
-        run: echo "Skipping ${{ matrix.task }} for changeset release PR"
-
       - uses: actions/checkout@v4
-        if: ${{ env.SKIP_CI != 'true' }}
 
       - uses: jdx/mise-action@v2
-        if: ${{ env.SKIP_CI != 'true' }}
 
       - run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-        if: ${{ env.SKIP_CI != 'true' }}
 
       - uses: actions/cache@v4
-        if: ${{ env.SKIP_CI != 'true' }}
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -32,21 +22,19 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: mise run install --frozen-lockfile
-        if: ${{ env.SKIP_CI != 'true' }}
 
       - name: Cache Playwright Browsers
         id: playwright-cache
-        if: ${{ env.SKIP_CI != 'true' && matrix.task == 'test' }}
+        if: ${{ matrix.task == 'test' }}
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install Playwright Browsers
-        if: ${{ env.SKIP_CI != 'true' && matrix.task == 'test' && steps.playwright-cache.outputs.cache-hit != 'true' }}
+        if: ${{ matrix.task == 'test' && steps.playwright-cache.outputs.cache-hit != 'true' }}
         run: pnpm exec playwright install --with-deps chromium
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 0
 
       - run: mise run ${{ matrix.task }}
-        if: ${{ env.SKIP_CI != 'true' }}

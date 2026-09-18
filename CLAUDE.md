@@ -18,7 +18,7 @@ Monorepo with independently-versioned packages:
 
 All tasks run via mise: `mise run <task>`
 
-`install` `build` `test` `oxlint` `oxfmt`
+`install` `build` `test` `oxlint` `oxfmt` `bump`
 
 ## Skills
 
