@@ -119,6 +119,7 @@ Code quality is checked automatically in CI.
 - `packages/shared/` - Shared types and utilities
 - `packages/vuebugger/` - Vue debugging utilities
 - `packages/vueltip/` - Vue tooltip components/composables
+- `packages/vuetification/` - Vue notifications
 - `demo/` - Demo application for testing packages
 
 ## Questions?
