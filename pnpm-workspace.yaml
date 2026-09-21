@@ -9,7 +9,7 @@ catalogs:
     '@tsconfig/node24': ^24.0.4
     '@types/node': ^24.11.0
     '@vingy/nimver': ^5.0.0
-    '@vitejs/plugin-vue': ^6.0.8
+    '@vitejs/plugin-vue': ^6.0.9
     '@vitest/browser-playwright': 4.1.8
     '@vue/devtools-api': ^8.1.2
     '@vue/language-core': ~3.1.5

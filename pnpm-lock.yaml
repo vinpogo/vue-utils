@@ -22,8 +22,8 @@ catalogs:
       specifier: ^5.0.0
       version: 5.0.0
     '@vitejs/plugin-vue':
-      specifier: ^6.0.8
-      version: 6.0.8
+      specifier: ^6.0.9
+      version: 6.0.9
     '@vitest/browser-playwright':
       specifier: 4.1.8
       version: 4.1.8
@@ -82,7 +82,7 @@ importers:
         version: 5.0.0
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.8(vite@8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.9(vite@8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vitest/browser-playwright':
         specifier: 'catalog:'
         version: 4.1.8(playwright@1.60.0)(vite@8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vitest@4.1.8)
@@ -128,7 +128,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.8(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.9(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/tsconfig':
         specifier: 'catalog:'
         version: 0.9.1(typescript@6.0.3)(vue@3.5.34(typescript@6.0.3))
@@ -146,7 +146,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.8(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.9(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/language-core':
         specifier: 'catalog:'
         version: 3.1.8(typescript@6.0.3)
@@ -165,7 +165,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.8(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.9(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/devtools-api':
         specifier: 'catalog:'
         version: 8.1.2
@@ -196,7 +196,7 @@ importers:
         version: link:../shared
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.8(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
+        version: 6.0.9(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/language-core':
         specifier: 'catalog:'
         version: 3.1.8(typescript@6.0.3)
@@ -1220,8 +1220,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@vitejs/plugin-vue@6.0.8':
-    resolution: {integrity: sha512-0ZjgOg7oO6farnNGup7yvoM/YXZV84OZxHAwtflItNa/6zzQyVb5LNxyea3FEKEX2XlagIKzrlH7wwxkKgtiew==}
+  '@vitejs/plugin-vue@6.0.9':
+    resolution: {integrity: sha512-rD/MORlhaZMlXWW0rEn4FB4wMinWC0z/D7Ye160S5+Rs1mC8ZDAdcDp4SjKfUhG5t8q1ktcPVw4xuTkPRlzrSA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -2969,13 +2969,13 @@ snapshots:
 
   '@vingy/nimver@5.0.0': {}
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
+  '@vitejs/plugin-vue@6.0.9(vite@8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.1.5(@types/node@24.11.0)(esbuild@0.27.3)(jiti@2.7.0)
       vue: 3.5.34(typescript@6.0.3)
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
+  '@vitejs/plugin-vue@6.0.9(vite@8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.34(typescript@6.0.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.1.5(@types/node@25.2.3)(esbuild@0.27.3)(jiti@2.7.0)
