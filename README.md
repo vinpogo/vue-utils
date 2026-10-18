@@ -23,7 +23,20 @@ Headless tooltip plugin for Vue with smart visibility detection and a single sha
 Install:
 
 ```bash
-pnpm add vueltip
+pnpm add @vingy/vueltip
+```
+
+## Vuetification
+
+TODO: one-line pitch for what Vuetification does.
+
+- Package: [packages/vuetification](packages/vuetification)
+- Docs: [packages/vuetification/README.md](packages/vuetification/README.md)
+
+Install:
+
+```bash
+pnpm add @vingy/vuetification
 ```
 
 ## Demo
