@@ -98,13 +98,14 @@ Release-Note: Tooltips no longer flicker when the reference is re-rendered.
 ```bash
 pnpm exec nimver bump --dry-run   # preview versions + changelog entries
 pnpm bump                         # write them, commit, and tag
-git push --follow-tags            # pushing the tag publishes to npm
+git push --follow-tags            # pushing the tags publishes to npm
 ```
 
 `bump` updates each affected `package.json` and `CHANGELOG.md`, makes one
-`version:` commit, and tags it. Pushing the tag triggers
-[`publish.yml`](./.github/workflows/publish.yml), which builds and publishes to
-npm. To release a single package, pass its name:
+`version:` commit, and tags it once per released package. Each pushed tag
+triggers its own [`publish.yml`](./.github/workflows/publish.yml) run, which
+publishes only the package that tag names and creates a GitHub release from its
+changelog entry. To release a single package, pass its name:
 `pnpm exec nimver bump @vingy/vueltip`.
 
 Because versions come from history, CI needs the full history and the tags —

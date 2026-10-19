@@ -18,8 +18,7 @@
     "dev": "pnpm -r --parallel --stream dev",
     "demo": "pnpm --filter demo run dev",
     "typecheck": "tsc --noEmit && pnpm --filter demo run typecheck",
-    "bump": "nimver bump",
-    "publish": "pnpm build && pnpm -r publish --no-git-checks"
+    "bump": "nimver bump"
   },
   "devDependencies": {
     "@tsconfig/node24": "catalog:",
