@@ -3,16 +3,22 @@ on:
     tags:
       # nimver writes `@vingy/<package>-v<version>`. A bare `*` would not match:
       # GitHub Actions patterns treat it as "any character except `/`".
+      #
+      # Every tag gets its own run, so a run only ever handles the package its
+      # tag names. GitHub sends no tag events at all for a push of more than
+      # three tags.
       - '@vingy/*'
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   publish:
-    name: Publish Packages
+    name: Publish ${{ github.ref_name }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Creating the GitHub release.
+      id-token: write # npm trusted publishing.
     steps:
       - uses: actions/checkout@v4
 
@@ -29,9 +35,47 @@ jobs:
 
       - run: mise run install --frozen-lockfile
 
-      # Publishes every workspace package whose version is not on the registry
-      # yet, so a tag for one package is a no-op for the other.
+      - name: Read the tag
+        # `@vingy/vueltip-v2.4.0-rc.1` is version `2.4.0-rc.1` of
+        # `@vingy/vueltip`, a prerelease on track `rc`.
+        id: tag
+        shell: bash
+        run: |
+          package="${GITHUB_REF_NAME%-v*}"
+          version="${GITHUB_REF_NAME##*-v}"
+          track=""
+          if [[ "$version" == *-* ]]; then
+            prerelease="${version#*-}"
+            track="${prerelease%%.*}"
+          fi
+          {
+            echo "package=$package"
+            echo "version=$version"
+            echo "dir=packages/${package#@vingy/}"
+            echo "track=$track"
+          } >> "$GITHUB_OUTPUT"
+
+      - run: pnpm build
+
       - name: Publish to npm
-        # `pnpm run`, not `pnpm publish`: the latter resolves to pnpm's built-in
-        # publish command and would try to publish the workspace root.
-        run: pnpm run publish
+        # A prerelease goes to a dist-tag named after its track, so it does not
+        # become what `npm install` gives everyone.
+        env:
+          PACKAGE: ${{ steps.tag.outputs.package }}
+          TRACK: ${{ steps.tag.outputs.track }}
+        run: pnpm --filter "$PACKAGE" publish --no-git-checks ${TRACK:+--tag "$TRACK"}
+
+      - name: Extract the changelog entry
+        env:
+          DIR: ${{ steps.tag.outputs.dir }}
+          VERSION: ${{ steps.tag.outputs.version }}
+        run: |
+          awk -v heading="## [$VERSION]" \
+            'index($0, heading) == 1 { found = 1; next } found && /^## / { exit } found' \
+            "$DIR/CHANGELOG.md" > release-notes.md
+          test -s release-notes.md
+
+      - uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
+        with:
+          body_path: release-notes.md
+          prerelease: ${{ steps.tag.outputs.track != '' }}
