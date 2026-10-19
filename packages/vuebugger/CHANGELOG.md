@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.3] - 2026-10-19
+
+### vuebugger
+- `@vue/devtools-kit` was still bundled into production builds even when `__ENABLE_VUEBUGGER__` was set to `false`. The devtools integration is now loaded via a dynamic import, so builds with the flag set to `false` drop it entirely.
+
+### Commits
+- build(deps): bump vue-tsc from 3.3.8 to 3.3.11
+- chore: replace changesets with nimver releases
+- build(deps): bump pinia from 3.0.4 to 4.0.2
+- refactor(demo): remove unused pinia
+- chore: demo as own package so commits do not accidentally bump other packages
+- fix(vuebugger): load devtools integration lazily
+- chore: bump dependencies
+
 ## 0.4.2
 
 ### Patch Changes

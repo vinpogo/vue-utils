@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.3.1] - 2026-10-19
+
+### Commits
+- build(deps): bump vue-tsc from 3.3.8 to 3.3.11
+- chore: replace changesets with nimver releases
+- build(deps): bump pinia from 3.0.4 to 4.0.2
+- refactor(demo): remove unused pinia
+- chore: demo as own package so commits do not accidentally bump other packages
+- chore: bump dependencies
+
 ## 2.3.0
 
 ### Minor Changes

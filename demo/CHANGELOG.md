@@ -1,0 +1,100 @@
+# Changelog
+
+## [0.1.0] - 2026-10-19
+
+### Breaking Changes
+- rename content to text
+
+### Commits
+- feat: custom uid generator
+- chore: change vitest reporters
+- feat: disable editing in componentInspector as on.editComponentState is never fired
+- chore: prepare monorepo
+- chore: rename repository
+- feat(shared): add shared package
+- feat(vueltip): add vueltip package
+- feat: add changesets
+- test: add coverage and introduce browser tests
+- deps(mise): add pnpm
+- deps: add playwright
+- conf(ci): add pull-requests permission
+- conf(ci): remove redundant if condition
+- feat(vueltip): add component to plugin options
+- feat(demo): comprehensive demo for both packages
+- docs: enhance README
+- conf(oxfmt): ignore changesets
+- conf(ci): don't run on pull_request
+- feat(demo): add dialog case to demo
+- chore(shared): add build step so that the warning doesn't show building other packages
+- feat(vueltip): proper typescript support
+- feat(demo): update demo for proper typescript support
+- chore(ci): remove coverage
+- chore: ignore screenshots for failed browser tests
+- feat(vueltip): allow to control which direction to detect for trunction via modifiers
+- fix: update tooltip content when binding updates
+- feat: allow placement via directive arg
+- fix: placement and truncation updates when binding changes
+- feat(vueltip): allow null and undefined as value
+- deps: bump all deps
+- chore: add copilot instructions
+- fix: support v-if on tooltip element
+- docs: refine CONTRIBUTIONS.md
+- conf(ci): quality checks only on PR
+- ref(vueltip)!: rename content to text
+- feat(vueltip): allow for custom data to be passed to the tooltip
+- chore: add typecheck
+- ref(vueltip): prefix default keys with `data-`
+- chore(copilot): update skills
+- conf: nicer changelog formatter
+- deps: bump dependencies
+- conf(ci): dont run on release branches
+- conf(ci): change to push trigger
+- conf(ci): remove dead workflow
+- docs: sanitize skills
+- fix: import.meta.ENV being undefined
+- conf(ci): skip ci jobs on release branches
+- fix(vueltip): tooltip immediately disappears when element in unMounted
+- chore: silence some logs in test runs
+- conf(ci): cache browser in tests
+- conf(ci): release pr can run workflows
+- feat(vueltip): add basicTooltip component
+- fix(demo): placement switched due to not enough space
+- fix(demo): adjust text to be consistent with others
+- fix(demo): add lang
+- fix(demo): correct title
+- fix(demo): correct favicon
+- ref: use vnode instead of a fully fledged app for rendering the component
+- chore: setup zed
+- chore: use vite instead of tsdown
+- deps: bump everything
+- feat(vuebugger): add ability to bundle it for prod builds
+- chore: apply oxfmt
+- chore: optimize skills
+- chore: remove devbox traces
+- feat(ci): add caching to publish job
+- chore: ignore vitest attachments
+- feat(vuebugger): add option to disable tracking of debug state
+- feat(vueltip): close tooltip on `Esc`
+- fix(vuebugger): no memory leak on module level debugs and HMR
+- fix(ci): actually github token should be sufficient
+- refactor: replace vite-plugin-dts with unplugin-dts
+- build: upgrade dependencies
+- build: add entryRoot to dts config and upgrade typescript to 6.0.3
+- fix(vueltip): bundle shared types
+- deps: update dependencies
+- build(deps): bump unplugin-dts from 1.0.0 to 1.0.3
+- build(deps): bump postcss in the npm_and_yarn group across 1 directory
+- build(deps): bump vite-plugin-vue-devtools from 8.1.2 to 8.2.1
+- build(deps): bump @microsoft/api-extractor from 7.58.1 to 7.58.12
+- build(deps): bump vue-tsc from 3.2.8 to 3.3.8
+- build(deps): bump vite from 8.0.16 to 8.1.5
+- build(deps): bump @floating-ui/vue from 1.1.10 to 2.0.1
+- fix(vueltip): support floating-ui v2 peer range
+- chore: add chagnesets
+- build(deps): bump @vitejs/plugin-vue from 6.0.7 to 6.0.8
+- build(deps): bump tailwindcss from 4.3.0 to 4.3.3
+- fix(vueltip): restore tooltip parent after dialog reparenting
+- fix: export tooltip directive types
+- build(deps): bump vue-tsc from 3.3.8 to 3.3.11
+- chore: demo as own package so commits do not accidentally bump other packages
+- chore: bump dependencies
