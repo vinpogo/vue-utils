@@ -90,13 +90,14 @@ const { tooltipStyles, arrowStyles, show, content } =
 Import and register the tooltip component and plugin in your app's entry point:
 
 ```ts
-// main.ts
-import { createApp } from 'vue'
-import App from './App.vue'
 import {
   vueltipPlugin,
   vueltipDirective,
 } from '@vingy/vueltip'
+// main.ts
+import { createApp } from 'vue'
+
+import App from './App.vue'
 import Tooltip from './components/Tooltip.vue'
 
 const app = createApp(App)
@@ -149,6 +150,7 @@ import {
   vueltipDirective,
   BasicTooltip,
 } from '@vingy/vueltip'
+
 import '@vingy/vueltip/basicTooltip.css'
 
 const app = createApp(App)
@@ -305,9 +307,7 @@ declare module '@vingy/vueltip' {
 <script setup>
 import { useVueltip } from '@vingy/vueltip'
 
-const { content, show } = useVueltip({
-  /* ... */
-})
+const { content, show } = useVueltip({/* ... */})
 </script>
 
 <template>

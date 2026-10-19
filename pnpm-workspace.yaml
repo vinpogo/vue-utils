@@ -5,24 +5,24 @@ packages:
 catalogs:
   default:
     '@floating-ui/vue': ^2.0.1
-    '@microsoft/api-extractor': ^7.58.12
-    '@tsconfig/node24': ^24.0.4
-    '@types/node': ^24.11.0
-    '@vingy/nimver': ^5.0.0
-    '@vitejs/plugin-vue': ^6.0.8
-    '@vitest/browser-playwright': 4.1.8
-    '@vue/devtools-api': ^8.1.2
-    '@vue/language-core': ~3.1.5
+    '@microsoft/api-extractor': ^7.59.4
+    '@tsconfig/node24': ^24.0.5
+    '@types/node': ^24.19.2
+    '@vingy/nimver': ^5.1.2
+    '@vitejs/plugin-vue': ^6.0.10
+    '@vitest/browser-playwright': 5.0.5
+    '@vue/devtools-api': ^8.2.1
+    '@vue/language-core': ^3.3.13
     '@vue/tsconfig': ^0.9.1
-    oxfmt: ^0.54.0
-    oxlint: ^1.69.0
-    playwright: ^1.60.0
+    oxfmt: ^0.73.0
+    oxlint: ^1.88.0
+    playwright: ^1.64.1
     typescript: ^6.0.3
-    unplugin-dts: ^1.0.3
-    vite: ^8.1.5
+    unplugin-dts: ^1.1.2
+    vite: ^8.3.4
     vite-plugin-vue-devtools: ^8.2.1
-    vitest: 4.1.8
-    vue: ^3.5.28
-    vue-tsc: ^3.3.11
+    vitest: 5.0.5
+    vue: ^3.5.44
+    vue-tsc: ^3.3.13
 
 linkWorkspacePackages: true

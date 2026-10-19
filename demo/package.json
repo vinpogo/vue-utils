@@ -8,7 +8,7 @@
     "typecheck": "vue-tsc --build"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@vingy/vuebugger": "workspace:^",
     "@vingy/vueltip": "workspace:^",
     "tailwindcss": "^4.3.3",
