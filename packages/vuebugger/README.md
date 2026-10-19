@@ -80,3 +80,13 @@ define: {
 ```
 
 When `__ENABLE_VUEBUGGER__` is not defined at all, the original behaviour is preserved — active in dev, inactive in production.
+
+Define `__ENABLE_VUEBUGGER__` explicitly so production builds don't emit the devtools chunk at all. If it is left undefined, the chunk is still emitted but never loaded:
+
+```ts
+export default defineConfig(({ command }) => ({
+  define: {
+    __ENABLE_VUEBUGGER__: command === 'serve',
+  },
+}))
+```
