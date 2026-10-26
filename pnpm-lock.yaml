@@ -19,8 +19,8 @@ catalogs:
       specifier: ^24.19.2
       version: 24.19.2
     '@vingy/nimver':
-      specifier: ^5.2.0
-      version: 5.2.0
+      specifier: ^5.3.1
+      version: 5.3.1
     '@vitejs/plugin-vue':
       specifier: ^6.0.10
       version: 6.0.10
@@ -79,7 +79,7 @@ importers:
         version: 24.19.2
       '@vingy/nimver':
         specifier: 'catalog:'
-        version: 5.2.0
+        version: 5.3.1
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 6.0.10(vite@8.3.4(@types/node@24.19.2)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.44(typescript@6.0.3))
@@ -1221,8 +1221,8 @@ packages:
   '@types/node@25.2.3':
     resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
 
-  '@vingy/nimver@5.2.0':
-    resolution: {integrity: sha512-PQZIZQ5XFniCGcTQvvm4ih+AyICdHQtJnGRiyHQd7CI4xscDWY7cmusWpKweM3vJ2MGHt7ycNmTrYKBHQEZ8Ng==}
+  '@vingy/nimver@5.3.1':
+    resolution: {integrity: sha512-FvJYMHAjt+cueHgLHLDGo/0H4Kx8jY3lkq+ceFHja8UUZ/dWwOtQiAXnBhTtkV79cK9NCsPDYb1F6Zkn28YCNw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3042,7 +3042,7 @@ snapshots:
       undici-types: 7.16.0
     optional: true
 
-  '@vingy/nimver@5.2.0': {}
+  '@vingy/nimver@5.3.1': {}
 
   '@vitejs/plugin-vue@6.0.10(vite@8.3.4(@types/node@24.19.2)(esbuild@0.27.3)(jiti@2.7.0))(vue@3.5.44(typescript@6.0.3))':
     dependencies:
