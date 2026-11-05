@@ -6,6 +6,7 @@ Monorepo with independently-versioned packages:
 
 - **vuebugger**: Vue devtools plugin for debugging composables and reactive state
 - **vueltip**: Headless tooltip component with smart visibility detection
+- **vuetification**: Headless notification component
 - **shared**: Internal shared types/utilities (`@vingy/shared`)
 
 ## Stack
